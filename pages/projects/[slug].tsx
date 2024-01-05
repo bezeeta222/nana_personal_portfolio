@@ -82,7 +82,7 @@ export default function Project({
         <Conditional condition={!!deployment}>
           <DeploymentList deployment={deployment} />
         </Conditional>
-        <p className='mt-2 mb-4 font-light'>{description}</p>
+        <p className='mb-4 mt-2 font-light'>{description}</p>
       </>
     ),
     [],
@@ -115,7 +115,7 @@ export default function Project({
       <Conditional condition={hasScreenshots}>
         <H2 className='my-4'>Screenshots</H2>
         <ScrollContainer
-          className='list mt-4 mb-1 flex overflow-auto'
+          className='list mb-1 mt-4 flex overflow-auto'
           hideScrollbars={false}
         >
           {React.Children.toArray(screenshots.map(renderScreenShotList))}
@@ -124,7 +124,7 @@ export default function Project({
 
       <Conditional condition={hasSubProjects}>
         <H2 className='mt-4'>More Products</H2>
-        <p className='mt-1 mb-4 font-light'>Some additional products</p>
+        <p className='mb-4 mt-1 font-light'>Some additional products</p>
         {React.Children.toArray(subProjects.map(renderSubProjectList))}
       </Conditional>
     </>

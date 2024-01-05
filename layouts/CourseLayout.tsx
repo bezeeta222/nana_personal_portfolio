@@ -68,10 +68,10 @@ export default function CourseLayout({
             </div>
           </header>
           <div
-            className='divide-y divide-gray-100 pb-8 dark:divide-gray-800 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0'
+            className='divide-y divide-gray-100 pb-8 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0 dark:divide-gray-800'
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <dl className='pt-6 pb-10 xl:sticky xl:top-0 xl:border-b xl:border-gray-100 xl:pt-11 xl:dark:border-gray-800'>
+            <dl className='pb-10 pt-6 xl:sticky xl:top-0 xl:border-b xl:border-gray-100 xl:pt-11 xl:dark:border-gray-800'>
               <dt className='sr-only'>Authors</dt>
               <dd>
                 <ul className='flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8'>
@@ -114,7 +114,7 @@ export default function CourseLayout({
                 </ul>
               </dd>
             </dl>
-            <div className='divide-y-2 divide-gray-100 dark:divide-gray-800 xl:col-span-3 xl:row-span-2 xl:pb-0'>
+            <div className='divide-y-2 divide-gray-100 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-800'>
               {banner && (
                 <img
                   src={banner}
@@ -122,11 +122,11 @@ export default function CourseLayout({
                   alt='banner'
                 />
               )}
-              <div className='prose max-w-none !border-t-0 pt-6 pb-8 dark:prose-dark'>
+              <div className='prose max-w-none !border-t-0 pb-8 pt-6 dark:prose-dark'>
                 <TOCInline toc={toc} asDisclosure />
                 {children}
               </div>
-              <div className='pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300'>
+              <div className='pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300'>
                 <Link href={discussUrl(slug)} rel='nofollow'>
                   {'Discuss on Twitter'}
                 </Link>
@@ -137,7 +137,7 @@ export default function CourseLayout({
             </div>
             <footer>
               <div className='xl:sticky xl:top-32'>
-                <div className='divide-gray-100 text-sm font-medium leading-5 dark:divide-gray-800 xl:col-start-1 xl:row-start-2 xl:divide-y'>
+                <div className='divide-gray-100 text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 xl:divide-y dark:divide-gray-800'>
                   {(next || prev) && (
                     <div className='flex justify-between py-4 xl:block xl:space-y-8 xl:py-8'>
                       {prev && (

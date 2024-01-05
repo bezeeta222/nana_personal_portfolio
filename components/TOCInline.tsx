@@ -69,7 +69,7 @@ const TOCInline = ({
     <>
       {asDisclosure && renderTOC ? (
         <Collapse className='!border-0 !pt-0' title={title}>
-          <div className='ml-4 !-mt-4'>{tocList}</div>
+          <div className='!-mt-4 ml-4'>{tocList}</div>
         </Collapse>
       ) : (
         tocList

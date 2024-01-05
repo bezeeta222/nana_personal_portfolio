@@ -24,7 +24,7 @@ export default function Courses(): React.ReactElement {
                 title={title}
                 description={description}
                 banner={banner}
-                href={`/courses/${slug}`}
+                href={''}
               />
             ))}
           </div>
