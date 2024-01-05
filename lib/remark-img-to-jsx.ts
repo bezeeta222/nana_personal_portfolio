@@ -11,7 +11,7 @@ type ImageNode = Parent & {
 };
 
 export default function remarkImgToJsx() {
-  return (tree: Node) => {
+  return (tree: any) => {
     visit(
       tree,
       // only visit p tags that contain an img element

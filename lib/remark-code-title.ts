@@ -1,8 +1,10 @@
+// @ts-ignore
+
 import { Parent } from 'unist';
 import { visit } from 'unist-util-visit';
 
 export default function remarkCodeTitles() {
-  return (tree: Parent & { lang?: string }) =>
+  return (tree: any & { lang?: string }) =>
     visit(
       tree,
       'code',
