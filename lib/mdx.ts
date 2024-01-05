@@ -1,3 +1,4 @@
+// @ts-ignore
 import fs from 'fs';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
@@ -82,6 +83,7 @@ export async function getFileBySlug<T>(
       // this is the recommended way to add custom remark/rehype plugins:
       // The syntax might look weird, but it protects you in case we add/remove
       // plugins in the future.
+
       options.remarkPlugins = [
         ...(options.remarkPlugins ?? []),
         remarkExtractFrontmatter,
@@ -91,7 +93,8 @@ export async function getFileBySlug<T>(
         [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
         remarkImgToJsx,
-      ];
+      ] as any;
+
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
         rehypeSlug,

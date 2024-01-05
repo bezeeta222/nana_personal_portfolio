@@ -1,4 +1,4 @@
-// ts-ignore
+// @ts-ignore
 import { Parent } from 'unist';
 import { VFile } from 'vfile';
 import { visit } from 'unist-util-visit';
