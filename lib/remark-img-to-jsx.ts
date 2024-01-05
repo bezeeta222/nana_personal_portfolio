@@ -14,10 +14,10 @@ export default function remarkImgToJsx() {
   return (tree: any) => {
     visit(
       tree,
-      // only visit p tags that contain an img element
-      (node: Parent): node is Parent =>
+      (node: Node): node is Parent =>
         node.type === 'paragraph' &&
-        node.children.some(n => n.type === 'image'),
+        (node as Parent).children && // Ensure 'children' property exists
+        (node as Parent).children.some(n => n.type === 'image'),
       (node: Parent) => {
         const imageNode = node.children.find(
           n => n.type === 'image',
