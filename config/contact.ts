@@ -1,11 +1,6 @@
 export enum ContactType {
-  github = 'github',
   linkedin = 'linkedin',
-  twitter = 'twitter',
-  youtube = 'youtube',
   email = 'email',
-  buymeacoffee = 'buymeacoffee',
-  googlescholar = 'googlescholar',
 }
 
 export interface Contact {
@@ -20,13 +15,8 @@ export const contact: Contact = {
   site: 'karanpratapsingh.com',
   calendly: 'https://calendly.com/karanpratapsingh',
   links: {
-    github: 'https://github.com/karanpratapsingh',
-    linkedin: 'https://linkedin.com/in/karan99',
-    googlescholar:
-      'https://scholar.google.com/citations?user=8wIfeAsAAAAJ&hl=en',
-    twitter: 'https://twitter.com/karan_6864',
-    youtube: 'https://www.youtube.com/c/KaranPratapSingh',
-    email: 'mailto:contact@karanpratapsingh.com',
-    buymeacoffee: 'https://www.buymeacoffee.com/karanps',
+    linkedin: 'https://www.linkedin.com/in/fakhrul-syahmi-0b9bb42a8',
+    email:
+      'https://mail.google.com/mail/?view=cm&fs=1&to=fakhrulsyahmiwork46@gmail.com', // Gmail compose link
   },
 };

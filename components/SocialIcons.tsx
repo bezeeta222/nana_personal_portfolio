@@ -4,16 +4,8 @@ import { contact, ContactType } from 'config/contact';
 import React, { memo } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa';
-import {
-  IoLogoGithub as GithubIcon,
-  IoLogoTwitter as TwitterIcon,
-} from 'react-icons/io';
-import {
-  SiBuymeacoffee as BuymeacoffeeIcon,
-  SiGmail as MailIcon,
-  SiYoutube as YoutubeIcon,
-  SiGooglescholar as Googlescholar,
-} from 'react-icons/si';
+
+import { SiGmail as MailIcon } from 'react-icons/si';
 import { Maybe, Tuple } from 'types';
 
 interface SocialIconsProps {
@@ -34,7 +26,7 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
   const [type, url] = entry;
 
   const props: IconBaseProps = {
-    className: 'icon cursor-pointer text-2xl mr-6',
+    className: 'icon cursor-pointer text-7xl mr-6 mb-10',
     color: Colors[type],
   };
 
@@ -45,28 +37,10 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
       icon = <LinkedinIcon {...props} />;
       break;
 
-    case ContactType.twitter:
-      icon = <TwitterIcon {...props} />;
-      break;
-
-    case ContactType.github:
-      icon = <GithubIcon {...props} />;
-      break;
-
-    case ContactType.youtube:
-      icon = <YoutubeIcon {...props} />;
-      break;
-
     case ContactType.email:
       icon = <MailIcon {...props} />;
       break;
 
-    case ContactType.buymeacoffee:
-      icon = <BuymeacoffeeIcon {...props} />;
-      break;
-    case ContactType.googlescholar:
-      icon = <Googlescholar {...props} />;
-      break;
     default:
       break;
   }
